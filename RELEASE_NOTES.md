@@ -1,3 +1,11 @@
+#### Fork - 30.07.2018
+
+* BREAKING: Renamed Result to Trial
+* Removed tests for interop with C#/VB.NET.
+* Migrated test project to .NET Core 2.0.
+* Updated Travis config.
+* (Not maintained build script.)
+
 #### 0.6.0 - 21.07.2016
 * New version for .NETStandard 1.6 and coreclr
 
