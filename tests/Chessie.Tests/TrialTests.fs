@@ -1,4 +1,4 @@
-﻿module Chessie.Trial.Tests
+module Chessie.Trial.Tests
 
 open Chessie.ErrorHandling
 open NUnit.Framework
@@ -53,15 +53,15 @@ let ``mapFailure if failure should map over empty list of errors`` () =
     |> shouldEqual (Bad [])
 
 [<Test>]
-let ``tryCatch if failure should return exception`` () = 
-    let ex = exn "error" 
-    1 
-    |> Trial.Catch (fun x -> raise ex) 
+let ``tryCatch if failure should return exception`` () =
+    let ex = exn "error"
+    1
+    |> Trial.Catch (fun x -> raise ex)
     |> shouldEqual (Bad[ex])
-        
+
 
 [<Test>]
-let ``tryCatch if success should return list`` () = 
-    1 
-    |> Trial.Catch id 
+let ``tryCatch if success should return list`` () =
+    1
+    |> Trial.Catch id
     |> shouldEqual (Ok(1,[]))
